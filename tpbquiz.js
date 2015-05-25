@@ -41,7 +41,7 @@ else if ( Lawfulness > 0 && Methodical > -6 ) {
 	return "You are Lucy"}
 else if ( Lawfulness < 0 && Methodical > 3 ) {
 	return "You are Julian"}
-else if (Lawfulness < 0 && Methodical < 4 ) {
+else if (Lawfulness < 1 && Methodical < 4 ) {
 	return "You are Jacob"}
 else if (Lawfulness < 0 && Methodical > -2 ) {
 	return "You are Ricky"}
