@@ -29,23 +29,23 @@ var getValue = function(name) {
 
 //Determine which character matches up with the scores.
  
-if ( Lawfulness > 5 && Methodical > 5) {
+if ( Lawfulness > 3 && Methodical > 3) {
 	return "You are Mr. Lahey"}
-else if ( Lawfulness > 1 && Methodical > 1 ) {
+else if ( Lawfulness > 2 && Methodical < 0) {
+	return "You are Randy"}
+else if ( Lawfulness > 1 && Methodical > 0 ) {
 	return "You are Sarah"}
-else if ( Lawfulness > -2 && Methodical > -3 ) {
-	return "You are Bubbles"}
-else if ( Lawfulness > 2 && Methodical > -3 ) {
-	return "You are Randy"}			 
-else if ( Lawfulness > 0 && Methodical > -6 ) {
-	return "You are Lucy"}
-else if ( Lawfulness < 0 && Methodical > 3 ) {
+else if ( Lawfulness < 1 && Methodical > 3 ) {
 	return "You are Julian"}
-else if (Lawfulness < 1 && Methodical < 4 ) {
+else if ( Lawfulness > -2 && Methodical > -4 ) {
+	return "You are Bubbles"}
+else if ( Lawfulness > -1) {
+	return "You are Lucy"}
+else if (Lawfulness < 1 && Methodical > -1 ) {
 	return "You are Jacob"}
-else if (Lawfulness < 0 && Methodical > -2 ) {
+else if (Lawfulness >-5) {
 	return "You are Ricky"}
-else if (Lawfulness < 0 && Methodical <-4) {
+else if (Lawfulness < 0) {
 	return "You are Corey"
 }	 	 
 	 else {return "You are Philadelphia Collins"};
