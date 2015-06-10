@@ -6,18 +6,16 @@ function findPersonality() {
 
 //Check to make sure all the questions have been answered
 
-    var checkComplete = function (name) {
-        var Complete = document.getElementsByName(name);
-        var i;
-        for (i = 0; i < Complete.length; i++) {
-            if (Complete[i].checked === true) {
-                return (1);
-            }
-            else {
-                return (0);
-            }
+var checkComplete = function (name) {
+    var Complete = document.getElementsByName(name);
+    var i;
+    for (i = 0; i < Complete.length; i++) {
+        if (Complete[i].checked) {
+            return (1);
+            break;
         }
-    };
+    }
+};
 
 var checkQuestion1 = checkComplete('Question1');
 var checkQuestion2 = checkComplete('Question2');
@@ -54,52 +52,52 @@ var Methodical = Answer2 + Answer4 + Answer6;
 
 //Determine which character matches up with the scores.
 
-if (checkQuestion1 === 0) {
-    return "Please answer all the questions!";
+if (checkQuestion1 != 1) {
+    alert("Please answer all the questions!");
     }
-else if (checkQuestion2 === 0) {
-    return "Please answer all the questions!";
+else if (checkQuestion2 != 1) {
+    alert("Please answer all the questions!");
     }
-else if (checkQuestion3 === 0) {
-    return "Please answer all the questions!";
+else if (checkQuestion3 != 1) {
+    alert("Please answer all the questions!");
     }
-else if (checkQuestion4 === 0) {
-    return "Please answer all the questions!";
+else if (checkQuestion4 != 1) {
+    alert("Please answer all the questions!");
     }
-else if (checkQuestion5 === 0) {
-    return "Please answer all the questions!";
+else if (checkQuestion5 != 1) {
+    alert("Please answer all the questions!");
     }
-else if (checkQuestion6 === 0) {
-    return "Please answer all the questions!";
+else if (checkQuestion6 != 1) {
+    alert("Please answer all the questions!");
     }
 else if ( Lawfulness > 3 && Methodical > 3) {
-    return "You are Mr. Lahey";
+    document.getElementById("results").innerHTML = "You are Mr. Lahey!";
     }
 else if ( Lawfulness > 2 && Methodical < 0) {
-    return "You are Randy";
+    document.getElementById("results").innerHTML = "You are Randy";
     }
 else if ( Lawfulness > 1 && Methodical > 0 ) {
-    return "You are Sarah";
+    document.getElementById("results").innerHTML = "You are Sarah";
     }
 else if ( Lawfulness < 1 && Methodical > 3 ) {
-    return "You are Julian";
+    document.getElementById("results").innerHTML = "You are Julian";
     }
 else if ( Lawfulness > -2 && Methodical > -4 ) {
-    return "You are Bubbles";
+    document.getElementById("results").innerHTML = "You are Bubbles";
     }
 else if ( Lawfulness > -1) {
-    return "You are Lucy";
+    document.getElementById("results").innerHTML = "You are Lucy";
     }
 else if (Lawfulness < 1 && Methodical > -1 ) {
-    return "You are Jacob";
+    document.getElementById("results").innerHTML = "You are Jacob";
     }
 else if (Lawfulness >-5) {
-    return "You are Ricky";
+    document.getElementById("results").innerHTML = "You are Ricky";
     }
 else if (Lawfulness < 0) {
-    return "You are Corey";
+    document.getElementById("results").innerHTML = "You are Corey";
     }
 else {
-    return "You are Philadelphia Collins!";
+    document.getElementById("results").innerHTML = "You are Philadelphia Collins!";
     }
 }
